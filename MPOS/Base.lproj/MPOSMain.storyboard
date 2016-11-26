@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tRb-WD-dXI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +19,65 @@
                     <view key="view" contentMode="scaleToFill" id="vW4-Yu-Uvr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS MONTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ako-gW-0YK">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs. 2,10,240" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-bR-aUz">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2z-bS-bB8">
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2048" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-Ft-ZJZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ega-pS-DnZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O6-tP-bcr">
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.74509803919999995" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Request Payment">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClickedRequestPayment:" destination="tRb-WD-dXI" eventType="touchUpInside" id="N7t-26-jeE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ega-pS-DnZ" firstAttribute="top" secondItem="lIQ-Ft-ZJZ" secondAttribute="bottom" constant="6" id="2DM-oM-FSY"/>
+                            <constraint firstItem="7O6-tP-bcr" firstAttribute="centerX" secondItem="vW4-Yu-Uvr" secondAttribute="centerX" id="7G4-1I-IZC"/>
+                            <constraint firstItem="lIQ-Ft-ZJZ" firstAttribute="top" secondItem="M2z-bS-bB8" secondAttribute="bottom" constant="30" id="CN7-Tp-stj"/>
+                            <constraint firstItem="Ako-gW-0YK" firstAttribute="centerX" secondItem="vW4-Yu-Uvr" secondAttribute="centerX" id="DhN-8X-Rep"/>
+                            <constraint firstItem="M2z-bS-bB8" firstAttribute="centerX" secondItem="vW4-Yu-Uvr" secondAttribute="centerX" id="FCB-1L-BhB"/>
+                            <constraint firstItem="Ako-gW-0YK" firstAttribute="top" secondItem="ABa-wd-0B9" secondAttribute="bottom" constant="20" id="JtJ-wl-jGh"/>
+                            <constraint firstItem="ega-pS-DnZ" firstAttribute="centerX" secondItem="vW4-Yu-Uvr" secondAttribute="centerX" id="Nxa-Df-IVt"/>
+                            <constraint firstItem="d3Q-bR-aUz" firstAttribute="top" secondItem="Ako-gW-0YK" secondAttribute="bottom" constant="30" id="Xw3-1V-Rn2"/>
+                            <constraint firstItem="lIQ-Ft-ZJZ" firstAttribute="centerX" secondItem="vW4-Yu-Uvr" secondAttribute="centerX" id="fqg-CI-hbg"/>
+                            <constraint firstItem="M2z-bS-bB8" firstAttribute="top" secondItem="d3Q-bR-aUz" secondAttribute="bottom" constant="6" id="jNW-zd-LKA"/>
+                            <constraint firstItem="d3Q-bR-aUz" firstAttribute="centerX" secondItem="vW4-Yu-Uvr" secondAttribute="centerX" id="pGn-kv-mfX"/>
+                            <constraint firstItem="NFX-oE-UML" firstAttribute="top" secondItem="7O6-tP-bcr" secondAttribute="bottom" constant="60" id="s8L-m6-0fY"/>
+                            <constraint firstItem="7O6-tP-bcr" firstAttribute="width" secondItem="vW4-Yu-Uvr" secondAttribute="width" multiplier="3/4" id="wpk-Rh-EpS"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgF-UE-ULt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="-188"/>
+            <point key="canvasLocation" x="512.79999999999995" y="-188.45577211394306"/>
         </scene>
         <!--Create OrderVC-->
         <scene sceneID="Ffa-9G-k3M">
@@ -45,7 +100,7 @@
         <!--Request PaymentVC-->
         <scene sceneID="Mb6-sw-oK4">
             <objects>
-                <viewController id="5cP-gC-vuk" customClass="MPOSRequestPaymentVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MPOSRequestPaymentVC" id="5cP-gC-vuk" customClass="MPOSRequestPaymentVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5iG-hV-cHp"/>
                         <viewControllerLayoutGuide type="bottom" id="tPW-vM-mi5"/>
@@ -53,12 +108,71 @@
                     <view key="view" contentMode="scaleToFill" id="h5I-6b-XBH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon - Check" translatesAutoresizingMaskIntoConstraints="NO" id="WVW-tQ-rIG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0L9-WH-PQG"/>
+                                    <constraint firstAttribute="width" constant="50" id="mqw-wm-eoy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Request Sent!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya6-Ai-Aza">
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The payment request has been sent to the customer. You will receive a notification once the customer has made the payment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70T-Jn-0d4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can track all payment requests from orders view." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh1-wK-oPX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-7K-Igq">
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.74509803919999995" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Orders">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqI-HL-Qk7">
+                                <color key="backgroundColor" red="1" green="0.99984800160248555" blue="0.96320427102923067" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yhl-7K-Igq" firstAttribute="width" secondItem="h5I-6b-XBH" secondAttribute="width" multiplier="3/4" id="1pY-H1-8xi"/>
+                            <constraint firstItem="jh1-wK-oPX" firstAttribute="top" secondItem="70T-Jn-0d4" secondAttribute="bottom" constant="20" id="9Em-V3-XOc"/>
+                            <constraint firstItem="Ya6-Ai-Aza" firstAttribute="top" secondItem="WVW-tQ-rIG" secondAttribute="bottom" constant="30" id="DMd-LA-z4N"/>
+                            <constraint firstItem="Ya6-Ai-Aza" firstAttribute="centerX" secondItem="h5I-6b-XBH" secondAttribute="centerX" id="Ibb-S2-V0k"/>
+                            <constraint firstItem="TqI-HL-Qk7" firstAttribute="width" secondItem="Yhl-7K-Igq" secondAttribute="width" id="MLh-XW-iPL"/>
+                            <constraint firstItem="70T-Jn-0d4" firstAttribute="centerX" secondItem="h5I-6b-XBH" secondAttribute="centerX" id="MaT-N2-4hC"/>
+                            <constraint firstItem="WVW-tQ-rIG" firstAttribute="top" secondItem="5iG-hV-cHp" secondAttribute="bottom" constant="30" id="Mgv-DP-zwm"/>
+                            <constraint firstItem="TqI-HL-Qk7" firstAttribute="top" secondItem="Yhl-7K-Igq" secondAttribute="bottom" constant="20" id="N5B-Xd-VCl"/>
+                            <constraint firstItem="jh1-wK-oPX" firstAttribute="centerX" secondItem="h5I-6b-XBH" secondAttribute="centerX" id="OKd-uM-hnw"/>
+                            <constraint firstItem="jh1-wK-oPX" firstAttribute="leading" secondItem="h5I-6b-XBH" secondAttribute="leadingMargin" constant="10" id="PKh-ef-5qe"/>
+                            <constraint firstItem="70T-Jn-0d4" firstAttribute="top" secondItem="Ya6-Ai-Aza" secondAttribute="bottom" constant="20" id="TYk-vE-p57"/>
+                            <constraint firstItem="tPW-vM-mi5" firstAttribute="top" secondItem="TqI-HL-Qk7" secondAttribute="bottom" constant="60" id="aUJ-6j-gjO"/>
+                            <constraint firstItem="Yhl-7K-Igq" firstAttribute="centerX" secondItem="h5I-6b-XBH" secondAttribute="centerX" id="eVh-1U-Xnh"/>
+                            <constraint firstItem="70T-Jn-0d4" firstAttribute="leading" secondItem="h5I-6b-XBH" secondAttribute="leading" constant="15" id="ivb-gi-DQ4"/>
+                            <constraint firstItem="WVW-tQ-rIG" firstAttribute="centerX" secondItem="h5I-6b-XBH" secondAttribute="centerX" id="z2g-lW-DrE"/>
+                            <constraint firstItem="TqI-HL-Qk7" firstAttribute="centerX" secondItem="h5I-6b-XBH" secondAttribute="centerX" id="zCh-ah-o3F"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uq5-P3-IX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2175" y="-188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon - Check" width="78" height="78"/>
+    </resources>
 </document>

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,11 +19,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-fH-91D">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PayX" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-fH-91D">
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="zRv-fH-91D" secondAttribute="height" multiplier="15:8" id="A8t-G2-oFu"/>
-                        <constraint firstAttribute="height" constant="128" id="IEf-h6-KnA"/>
-                        <constraint firstAttribute="width" constant="240" id="KP8-qo-frM"/>
+                        <constraint firstAttribute="height" constant="70" id="uzQ-bF-biD"/>
                     </constraints>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vni-Sw-8kd">
@@ -41,37 +38,61 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4S-au-MJh">
-                    <color key="backgroundColor" red="0.14286728043614028" green="1" blue="0.6267186554239893" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                    <state key="normal" title="Login"/>
+                    <color key="backgroundColor" red="0.0039215686274509803" green="0.74509803921568629" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="bnClickedLogin:" destination="-1" eventType="touchUpInside" id="gJ0-xY-pBh"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3k-Kw-KJQ">
-                    <state key="normal" title="Forgot Password"/>
+                    <state key="normal" title="Forgot Password?">
+                        <color key="titleColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="btnClickedForgotPassword:" destination="-1" eventType="touchUpInside" id="QzM-Ku-bRe"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Go cashless!" translatesAutoresizingMaskIntoConstraints="NO" id="Gl2-Dr-E1L">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="clN-Ce-cCj"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cyD-KZ-RjZ" firstAttribute="width" secondItem="vni-Sw-8kd" secondAttribute="width" id="1cE-4l-DI1"/>
-                <constraint firstItem="H3k-Kw-KJQ" firstAttribute="top" secondItem="D4S-au-MJh" secondAttribute="bottom" constant="40" id="8mr-zS-LBa"/>
-                <constraint firstItem="cyD-KZ-RjZ" firstAttribute="top" secondItem="vni-Sw-8kd" secondAttribute="bottom" id="DHj-fg-fr7"/>
+                <constraint firstItem="H3k-Kw-KJQ" firstAttribute="top" secondItem="D4S-au-MJh" secondAttribute="bottom" constant="20" id="8mr-zS-LBa"/>
+                <constraint firstItem="Gl2-Dr-E1L" firstAttribute="top" secondItem="zRv-fH-91D" secondAttribute="bottom" constant="8" id="Bas-LJ-HNZ"/>
+                <constraint firstItem="cyD-KZ-RjZ" firstAttribute="top" secondItem="vni-Sw-8kd" secondAttribute="bottom" constant="-1" id="DHj-fg-fr7"/>
+                <constraint firstItem="Gl2-Dr-E1L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GTZ-BN-eq6"/>
                 <constraint firstItem="vni-Sw-8kd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ONs-tl-lik"/>
                 <constraint firstItem="H3k-Kw-KJQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OTV-A8-4Mr"/>
                 <constraint firstItem="zRv-fH-91D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="S2g-6Q-Jr4"/>
                 <constraint firstItem="cyD-KZ-RjZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fBo-Qr-1ru"/>
                 <constraint firstItem="zRv-fH-91D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g0L-NA-0Bb"/>
-                <constraint firstItem="vni-Sw-8kd" firstAttribute="top" secondItem="zRv-fH-91D" secondAttribute="bottom" constant="40" id="g63-Yl-lfD"/>
                 <constraint firstItem="cyD-KZ-RjZ" firstAttribute="height" secondItem="vni-Sw-8kd" secondAttribute="height" id="hqn-kc-WFO"/>
+                <constraint firstItem="D4S-au-MJh" firstAttribute="top" secondItem="cyD-KZ-RjZ" secondAttribute="bottom" constant="30" id="l8a-eG-n66"/>
                 <constraint firstItem="D4S-au-MJh" firstAttribute="width" secondItem="cyD-KZ-RjZ" secondAttribute="width" id="lzJ-sY-s37"/>
-                <constraint firstAttribute="bottom" secondItem="H3k-Kw-KJQ" secondAttribute="bottom" constant="50" id="qT6-hh-exE"/>
+                <constraint firstAttribute="bottom" secondItem="H3k-Kw-KJQ" secondAttribute="bottom" constant="80" id="qT6-hh-exE"/>
                 <constraint firstItem="vni-Sw-8kd" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="3/4" id="qfJ-Z9-B9Z"/>
                 <constraint firstItem="D4S-au-MJh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rQa-kk-SRh"/>
             </constraints>
+            <point key="canvasLocation" x="61.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Go cashless!" width="16" height="16"/>
+        <image name="PayX" width="16" height="16"/>
+    </resources>
 </document>

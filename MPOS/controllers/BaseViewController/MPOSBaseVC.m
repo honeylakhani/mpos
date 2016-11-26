@@ -35,7 +35,7 @@
     deviceWidth=cgRect.size.width;
     
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.translucent = NO;
+//    self.navigationController.navigationBar.translucent = NO;
 //    self.navigationController.navigationBar.barTintColor =COLOR_A5C339;
 //    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
 //    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
