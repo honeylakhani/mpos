@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="KGk-i7-Jjw" customClass="ProductTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Product" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJm-NL-Fqu">
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Oty" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y32-4w-1YG">
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-PG-CAf">
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NJm-NL-Fqu" secondAttribute="bottom" constant="20" id="93l-M1-rdA"/>
+                    <constraint firstItem="NJm-NL-Fqu" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="5/10" constant="30" id="DwQ-Ut-Wgk"/>
+                    <constraint firstItem="NJm-NL-Fqu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="GJq-ey-hCj"/>
+                    <constraint firstItem="y32-4w-1YG" firstAttribute="leading" secondItem="NJm-NL-Fqu" secondAttribute="trailing" constant="5" id="HeT-a6-Xjg"/>
+                    <constraint firstItem="y32-4w-1YG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="PHr-sa-s5X"/>
+                    <constraint firstAttribute="bottom" secondItem="y32-4w-1YG" secondAttribute="bottom" constant="30" id="Plr-1W-4I1"/>
+                    <constraint firstAttribute="bottom" secondItem="yq7-PG-CAf" secondAttribute="bottom" constant="30" id="W9W-sO-S3h"/>
+                    <constraint firstItem="y32-4w-1YG" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" constant="-30" id="cje-JQ-Wbd"/>
+                    <constraint firstItem="yq7-PG-CAf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="gDh-Gu-SCY"/>
+                    <constraint firstItem="NJm-NL-Fqu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="rDZ-sH-3CW"/>
+                    <constraint firstAttribute="trailing" secondItem="yq7-PG-CAf" secondAttribute="trailing" constant="10" id="sc0-wQ-XoJ"/>
+                    <constraint firstItem="yq7-PG-CAf" firstAttribute="leading" secondItem="y32-4w-1YG" secondAttribute="trailing" constant="5" id="wQI-8k-3p9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="txtFldAmt" destination="yq7-PG-CAf" id="iLe-5P-wUe"/>
+                <outlet property="txtFldProductName" destination="NJm-NL-Fqu" id="17P-iu-Qho"/>
+                <outlet property="txtFldQty" destination="y32-4w-1YG" id="sKN-uK-n1G"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="127"/>
+        </tableViewCell>
+    </objects>
+</document>

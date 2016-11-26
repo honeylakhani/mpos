@@ -21,6 +21,7 @@
   self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
   MPOSLoginSingupVC *homeVc = [[MPOSLoginSingupVC alloc]initWithNibName:NSStringFromClass([MPOSLoginSingupVC class]) bundle:nil];
   UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homeVc];
+  
   self.window.rootViewController = nav;
   [self.window makeKeyAndVisible];
 

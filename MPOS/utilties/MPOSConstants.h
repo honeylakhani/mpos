@@ -9,6 +9,10 @@
 #define USER_EMAIL @"email"
 #define USER_PHONE @"phone"
 #define OTP_LOGIN @"quickLogin"
+#define FONT_NORMAL(xx) [UIFont fontWithName:@"HelveticaNeue" size:xx]
+#define FONT_MEDIUM(xx) [UIFont fontWithName:@"HelveticaNeue-Medium" size:xx]
+#define FONT_BOLD(xx) [UIFont fontWithName:@"HelveticaNeue-Bold" size:xx]
+#define RUPEES_SIGN_TEXT @"₹"
 
 /*!
  ************************************************** ENUMs **************************************

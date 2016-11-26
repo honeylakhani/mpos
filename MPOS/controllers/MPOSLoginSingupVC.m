@@ -7,7 +7,7 @@
 //
 
 #import "MPOSLoginSingupVC.h"
-
+#import "MPOSCreateOrderVC.h"
 @interface MPOSLoginSingupVC ()
 @property (weak, nonatomic) IBOutlet UITextField *txtFldUserName;
 
@@ -57,7 +57,8 @@
 
 
 - (IBAction)bnClickedLogin:(id)sender {
-    
+  MPOSCreateOrderVC *vc = [[MPOSCreateOrderVC alloc]init];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)btnClickedForgotPassword:(id)sender {
 }

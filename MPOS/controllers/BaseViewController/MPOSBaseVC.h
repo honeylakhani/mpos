@@ -17,7 +17,7 @@
 
 - (void)setUpLoginButton;
 - (void)setUpImageBackButton;
-
+-(UIColor*)colorWithHexString:(NSString*)hex;
 
 
 - (void)setTextTitleForNav:(NSString*) title;

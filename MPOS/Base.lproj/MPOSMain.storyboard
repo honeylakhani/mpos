@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -45,7 +45,7 @@
         <!--Request PaymentVC-->
         <scene sceneID="Mb6-sw-oK4">
             <objects>
-                <viewController id="5cP-gC-vuk" customClass="MPOSRequestPaymentVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="requestPayment" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5cP-gC-vuk" customClass="MPOSRequestPaymentVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5iG-hV-cHp"/>
                         <viewControllerLayoutGuide type="bottom" id="tPW-vM-mi5"/>
@@ -53,12 +53,30 @@
                     <view key="view" contentMode="scaleToFill" id="h5I-6b-XBH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wsw-mA-mrZ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5cP-gC-vuk" id="JK0-Mc-BNF"/>
+                                    <outlet property="delegate" destination="5cP-gC-vuk" id="sB4-LF-4en"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wsw-mA-mrZ" secondAttribute="trailing" id="DTY-q4-upZ"/>
+                            <constraint firstItem="tPW-vM-mi5" firstAttribute="top" secondItem="Wsw-mA-mrZ" secondAttribute="bottom" id="Ekg-Pc-pus"/>
+                            <constraint firstItem="Wsw-mA-mrZ" firstAttribute="top" secondItem="h5I-6b-XBH" secondAttribute="top" id="asY-pQ-Pp2"/>
+                            <constraint firstItem="Wsw-mA-mrZ" firstAttribute="leading" secondItem="h5I-6b-XBH" secondAttribute="leading" id="tpV-sN-JZG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tblVw" destination="Wsw-mA-mrZ" id="tcJ-O8-krx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uq5-P3-IX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175" y="-188"/>
+            <point key="canvasLocation" x="2173.5999999999999" y="-188.45577211394306"/>
         </scene>
     </scenes>
 </document>

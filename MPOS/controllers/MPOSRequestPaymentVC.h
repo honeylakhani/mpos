@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MPOSRequestPaymentVC : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITableView *tblVw;
+@property(strong,nonatomic) NSString *totalQty,*totalAmt;
 @end
