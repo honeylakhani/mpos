@@ -8,24 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		61E30A121DE9A2B3007F035B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A111DE9A2B3007F035B /* main.m */; };
-		61E30A151DE9A2B3007F035B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A141DE9A2B3007F035B /* AppDelegate.m */; };
-		61E30A181DE9A2B3007F035B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A171DE9A2B3007F035B /* ViewController.m */; };
-		61E30A1B1DE9A2B3007F035B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E30A191DE9A2B3007F035B /* Main.storyboard */; };
 		61E30A1D1DE9A2B3007F035B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E30A1C1DE9A2B3007F035B /* Assets.xcassets */; };
 		61E30A201DE9A2B3007F035B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E30A1E1DE9A2B3007F035B /* LaunchScreen.storyboard */; };
+		61E30A2B1DE9C9A0007F035B /* MPOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A281DE9C9A0007F035B /* MPOSAppDelegate.m */; };
+		61E30A2C1DE9C9A0007F035B /* MPOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A2A1DE9C9A0007F035B /* MPOSViewController.m */; };
+		61E30A321DE9CA19007F035B /* MPOSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A311DE9CA19007F035B /* MPOSRequestManager.m */; };
+		61E30A351DE9CA24007F035B /* MPOSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A341DE9CA24007F035B /* MPOSActivityView.m */; };
+		61E30A381DE9CA34007F035B /* MPOSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A371DE9CA34007F035B /* MPOSAlertController.m */; };
+		61E30A3C1DE9CA4D007F035B /* MPOSBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A3B1DE9CA4D007F035B /* MPOSBaseVC.m */; };
+		61E30A411DE9CBE1007F035B /* MPOSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A401DE9CBE1007F035B /* MPOSReachability.m */; };
+		61E30A451DE9CBEC007F035B /* MPOSSSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A441DE9CBEC007F035B /* MPOSSSKeychain.m */; };
+		61E30A4F1DE9FF12007F035B /* MPOSCreateOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A471DE9FF12007F035B /* MPOSCreateOrderVC.m */; };
+		61E30A501DE9FF12007F035B /* MPOSDashboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A491DE9FF12007F035B /* MPOSDashboardVC.m */; };
+		61E30A511DE9FF12007F035B /* MPOSLoginSingupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A4B1DE9FF12007F035B /* MPOSLoginSingupVC.m */; };
+		61E30A521DE9FF12007F035B /* MPOSLoginSingupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E30A4C1DE9FF12007F035B /* MPOSLoginSingupVC.xib */; };
+		61E30A531DE9FF12007F035B /* MPOSRequestPaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A4E1DE9FF12007F035B /* MPOSRequestPaymentVC.m */; };
+		61E30A561DE9FF2D007F035B /* MPOSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E30A541DE9FF2D007F035B /* MPOSMain.storyboard */; };
+		A1285A3BB30BAD1A4120E9FC /* Pods_MPOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC8D097A62D317D36296BD6 /* Pods_MPOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CC8D097A62D317D36296BD6 /* Pods_MPOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C7778286E0ACF34B80506F /* Pods-MPOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MPOS/Pods-MPOS.release.xcconfig"; sourceTree = "<group>"; };
 		61E30A0D1DE9A2B3007F035B /* MPOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E30A111DE9A2B3007F035B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		61E30A131DE9A2B3007F035B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		61E30A141DE9A2B3007F035B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61E30A161DE9A2B3007F035B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		61E30A171DE9A2B3007F035B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		61E30A1A1DE9A2B3007F035B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61E30A1C1DE9A2B3007F035B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61E30A1F1DE9A2B3007F035B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61E30A211DE9A2B3007F035B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61E30A271DE9C9A0007F035B /* MPOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOSAppDelegate.h; sourceTree = "<group>"; };
+		61E30A281DE9C9A0007F035B /* MPOSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOSAppDelegate.m; sourceTree = "<group>"; };
+		61E30A291DE9C9A0007F035B /* MPOSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOSViewController.h; sourceTree = "<group>"; };
+		61E30A2A1DE9C9A0007F035B /* MPOSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOSViewController.m; sourceTree = "<group>"; };
+		61E30A301DE9CA19007F035B /* MPOSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSRequestManager.h; path = WebService/MPOSRequestManager.h; sourceTree = "<group>"; };
+		61E30A311DE9CA19007F035B /* MPOSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSRequestManager.m; path = WebService/MPOSRequestManager.m; sourceTree = "<group>"; };
+		61E30A331DE9CA24007F035B /* MPOSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSActivityView.h; path = utilties/MPOSActivityView.h; sourceTree = "<group>"; };
+		61E30A341DE9CA24007F035B /* MPOSActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSActivityView.m; path = utilties/MPOSActivityView.m; sourceTree = "<group>"; };
+		61E30A361DE9CA34007F035B /* MPOSAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSAlertController.h; path = controllers/MPOSAlertController.h; sourceTree = "<group>"; };
+		61E30A371DE9CA34007F035B /* MPOSAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSAlertController.m; path = controllers/MPOSAlertController.m; sourceTree = "<group>"; };
+		61E30A3A1DE9CA4D007F035B /* MPOSBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSBaseVC.h; path = controllers/BaseViewController/MPOSBaseVC.h; sourceTree = "<group>"; };
+		61E30A3B1DE9CA4D007F035B /* MPOSBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSBaseVC.m; path = controllers/BaseViewController/MPOSBaseVC.m; sourceTree = "<group>"; };
+		61E30A3D1DE9CB66007F035B /* MPOSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSConstants.h; path = utilties/MPOSConstants.h; sourceTree = "<group>"; };
+		61E30A3F1DE9CBE1007F035B /* MPOSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSReachability.h; path = "Third Party/MPOSReachability.h"; sourceTree = "<group>"; };
+		61E30A401DE9CBE1007F035B /* MPOSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSReachability.m; path = "Third Party/MPOSReachability.m"; sourceTree = "<group>"; };
+		61E30A431DE9CBEC007F035B /* MPOSSSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOSSSKeychain.h; sourceTree = "<group>"; };
+		61E30A441DE9CBEC007F035B /* MPOSSSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOSSSKeychain.m; sourceTree = "<group>"; };
+		61E30A461DE9FF12007F035B /* MPOSCreateOrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSCreateOrderVC.h; path = controllers/MPOSCreateOrderVC.h; sourceTree = "<group>"; };
+		61E30A471DE9FF12007F035B /* MPOSCreateOrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSCreateOrderVC.m; path = controllers/MPOSCreateOrderVC.m; sourceTree = "<group>"; };
+		61E30A481DE9FF12007F035B /* MPOSDashboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSDashboardVC.h; path = controllers/MPOSDashboardVC.h; sourceTree = "<group>"; };
+		61E30A491DE9FF12007F035B /* MPOSDashboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSDashboardVC.m; path = controllers/MPOSDashboardVC.m; sourceTree = "<group>"; };
+		61E30A4A1DE9FF12007F035B /* MPOSLoginSingupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSLoginSingupVC.h; path = controllers/MPOSLoginSingupVC.h; sourceTree = "<group>"; };
+		61E30A4B1DE9FF12007F035B /* MPOSLoginSingupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSLoginSingupVC.m; path = controllers/MPOSLoginSingupVC.m; sourceTree = "<group>"; };
+		61E30A4C1DE9FF12007F035B /* MPOSLoginSingupVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MPOSLoginSingupVC.xib; path = controllers/MPOSLoginSingupVC.xib; sourceTree = "<group>"; };
+		61E30A4D1DE9FF12007F035B /* MPOSRequestPaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSRequestPaymentVC.h; path = controllers/MPOSRequestPaymentVC.h; sourceTree = "<group>"; };
+		61E30A4E1DE9FF12007F035B /* MPOSRequestPaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSRequestPaymentVC.m; path = controllers/MPOSRequestPaymentVC.m; sourceTree = "<group>"; };
+		61E30A551DE9FF2D007F035B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MPOSMain.storyboard; sourceTree = "<group>"; };
+		A064974F270C774001517816 /* Pods-MPOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MPOS/Pods-MPOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1285A3BB30BAD1A4120E9FC /* Pods_MPOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08EF55E42B87C4E84F9C0675 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A064974F270C774001517816 /* Pods-MPOS.debug.xcconfig */,
+				49C7778286E0ACF34B80506F /* Pods-MPOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		18F8CB3400A7217F22185FE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC8D097A62D317D36296BD6 /* Pods_MPOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61E30A041DE9A2B3007F035B = {
 			isa = PBXGroup;
 			children = (
 				61E30A0F1DE9A2B3007F035B /* MPOS */,
 				61E30A0E1DE9A2B3007F035B /* Products */,
+				08EF55E42B87C4E84F9C0675 /* Pods */,
+				18F8CB3400A7217F22185FE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +115,15 @@
 		61E30A0F1DE9A2B3007F035B /* MPOS */ = {
 			isa = PBXGroup;
 			children = (
-				61E30A131DE9A2B3007F035B /* AppDelegate.h */,
-				61E30A141DE9A2B3007F035B /* AppDelegate.m */,
-				61E30A161DE9A2B3007F035B /* ViewController.h */,
-				61E30A171DE9A2B3007F035B /* ViewController.m */,
-				61E30A191DE9A2B3007F035B /* Main.storyboard */,
+				61E30A541DE9FF2D007F035B /* MPOSMain.storyboard */,
+				61E30A3E1DE9CBCB007F035B /* Third Party */,
+				61E30A2F1DE9C9F5007F035B /* Web Service */,
+				61E30A2E1DE9C9E7007F035B /* Utilities */,
+				61E30A2D1DE9C9DA007F035B /* Controllers */,
+				61E30A271DE9C9A0007F035B /* MPOSAppDelegate.h */,
+				61E30A281DE9C9A0007F035B /* MPOSAppDelegate.m */,
+				61E30A291DE9C9A0007F035B /* MPOSViewController.h */,
+				61E30A2A1DE9C9A0007F035B /* MPOSViewController.m */,
 				61E30A1C1DE9A2B3007F035B /* Assets.xcassets */,
 				61E30A1E1DE9A2B3007F035B /* LaunchScreen.storyboard */,
 				61E30A211DE9A2B3007F035B /* Info.plist */,
@@ -79,6 +140,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		61E30A2D1DE9C9DA007F035B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61E30A461DE9FF12007F035B /* MPOSCreateOrderVC.h */,
+				61E30A471DE9FF12007F035B /* MPOSCreateOrderVC.m */,
+				61E30A481DE9FF12007F035B /* MPOSDashboardVC.h */,
+				61E30A491DE9FF12007F035B /* MPOSDashboardVC.m */,
+				61E30A4A1DE9FF12007F035B /* MPOSLoginSingupVC.h */,
+				61E30A4B1DE9FF12007F035B /* MPOSLoginSingupVC.m */,
+				61E30A4C1DE9FF12007F035B /* MPOSLoginSingupVC.xib */,
+				61E30A4D1DE9FF12007F035B /* MPOSRequestPaymentVC.h */,
+				61E30A4E1DE9FF12007F035B /* MPOSRequestPaymentVC.m */,
+				61E30A391DE9CA38007F035B /* Base Controller */,
+				61E30A361DE9CA34007F035B /* MPOSAlertController.h */,
+				61E30A371DE9CA34007F035B /* MPOSAlertController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		61E30A2E1DE9C9E7007F035B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				61E30A3D1DE9CB66007F035B /* MPOSConstants.h */,
+				61E30A331DE9CA24007F035B /* MPOSActivityView.h */,
+				61E30A341DE9CA24007F035B /* MPOSActivityView.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		61E30A2F1DE9C9F5007F035B /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				61E30A301DE9CA19007F035B /* MPOSRequestManager.h */,
+				61E30A311DE9CA19007F035B /* MPOSRequestManager.m */,
+			);
+			name = "Web Service";
+			sourceTree = "<group>";
+		};
+		61E30A391DE9CA38007F035B /* Base Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61E30A3A1DE9CA4D007F035B /* MPOSBaseVC.h */,
+				61E30A3B1DE9CA4D007F035B /* MPOSBaseVC.m */,
+			);
+			name = "Base Controller";
+			sourceTree = "<group>";
+		};
+		61E30A3E1DE9CBCB007F035B /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				61E30A421DE9CBEC007F035B /* KeyChainWrapper */,
+				61E30A3F1DE9CBE1007F035B /* MPOSReachability.h */,
+				61E30A401DE9CBE1007F035B /* MPOSReachability.m */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		61E30A421DE9CBEC007F035B /* KeyChainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				61E30A431DE9CBEC007F035B /* MPOSSSKeychain.h */,
+				61E30A441DE9CBEC007F035B /* MPOSSSKeychain.m */,
+			);
+			name = KeyChainWrapper;
+			path = "Third Party/KeyChainWrapper";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61E30A241DE9A2B3007F035B /* Build configuration list for PBXNativeTarget "MPOS" */;
 			buildPhases = (
+				FB94840C77CE1219841B0FE0 /* [CP] Check Pods Manifest.lock */,
 				61E30A091DE9A2B3007F035B /* Sources */,
 				61E30A0A1DE9A2B3007F035B /* Frameworks */,
 				61E30A0B1DE9A2B3007F035B /* Resources */,
+				D46DA3FDB3FEC5E0343B7572 /* [CP] Embed Pods Frameworks */,
+				1164B2B9E86B843C97ABCB8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,41 +270,100 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E30A201DE9A2B3007F035B /* LaunchScreen.storyboard in Resources */,
+				61E30A521DE9FF12007F035B /* MPOSLoginSingupVC.xib in Resources */,
+				61E30A561DE9FF2D007F035B /* MPOSMain.storyboard in Resources */,
 				61E30A1D1DE9A2B3007F035B /* Assets.xcassets in Resources */,
-				61E30A1B1DE9A2B3007F035B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1164B2B9E86B843C97ABCB8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MPOS/Pods-MPOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D46DA3FDB3FEC5E0343B7572 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MPOS/Pods-MPOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB94840C77CE1219841B0FE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61E30A091DE9A2B3007F035B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61E30A181DE9A2B3007F035B /* ViewController.m in Sources */,
-				61E30A151DE9A2B3007F035B /* AppDelegate.m in Sources */,
+				61E30A351DE9CA24007F035B /* MPOSActivityView.m in Sources */,
+				61E30A511DE9FF12007F035B /* MPOSLoginSingupVC.m in Sources */,
+				61E30A531DE9FF12007F035B /* MPOSRequestPaymentVC.m in Sources */,
 				61E30A121DE9A2B3007F035B /* main.m in Sources */,
+				61E30A2C1DE9C9A0007F035B /* MPOSViewController.m in Sources */,
+				61E30A501DE9FF12007F035B /* MPOSDashboardVC.m in Sources */,
+				61E30A321DE9CA19007F035B /* MPOSRequestManager.m in Sources */,
+				61E30A2B1DE9C9A0007F035B /* MPOSAppDelegate.m in Sources */,
+				61E30A451DE9CBEC007F035B /* MPOSSSKeychain.m in Sources */,
+				61E30A411DE9CBE1007F035B /* MPOSReachability.m in Sources */,
+				61E30A381DE9CA34007F035B /* MPOSAlertController.m in Sources */,
+				61E30A4F1DE9FF12007F035B /* MPOSCreateOrderVC.m in Sources */,
+				61E30A3C1DE9CA4D007F035B /* MPOSBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		61E30A191DE9A2B3007F035B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61E30A1A1DE9A2B3007F035B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		61E30A1E1DE9A2B3007F035B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				61E30A1F1DE9A2B3007F035B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		61E30A541DE9FF2D007F035B /* MPOSMain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61E30A551DE9FF2D007F035B /* Base */,
+			);
+			name = MPOSMain.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -269,6 +459,7 @@
 		};
 		61E30A251DE9A2B3007F035B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A064974F270C774001517816 /* Pods-MPOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3T2M5UN5C5;
@@ -281,6 +472,7 @@
 		};
 		61E30A261DE9A2B3007F035B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C7778286E0ACF34B80506F /* Pods-MPOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3T2M5UN5C5;
@@ -310,6 +502,7 @@
 				61E30A261DE9A2B3007F035B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

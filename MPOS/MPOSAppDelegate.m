@@ -6,17 +6,24 @@
 //  Copyright © 2016 com.payu. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "MPOSAppDelegate.h"
+#import "MPOSLoginSingupVC.h"
 
-@interface AppDelegate ()
+@interface MPOSAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation MPOSAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+  MPOSLoginSingupVC *homeVc = [[MPOSLoginSingupVC alloc]initWithNibName:NSStringFromClass([MPOSLoginSingupVC class]) bundle:nil];
+  UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homeVc];
+  self.window.rootViewController = nav;
+  [self.window makeKeyAndVisible];
+
   return YES;
 }
 

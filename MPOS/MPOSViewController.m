@@ -6,13 +6,13 @@
 //  Copyright © 2016 com.payu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MPOSViewController.h"
 
-@interface ViewController ()
+@interface MPOSViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MPOSViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
