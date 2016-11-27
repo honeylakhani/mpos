@@ -83,6 +83,7 @@
     
     if([[object valueForKey:@"login_message"] isEqualToString:@"Success"])
     {
+      self.phone = [object valueForKey:@"u_phone"];
       UIStoryboard *storybrd = [UIStoryboard storyboardWithName:@"MPOSMain" bundle:nil];
       MPOSDashboardVC * dashBrdVC = [storybrd instantiateInitialViewController];
       [self.navigationController pushViewController:dashBrdVC animated:YES];

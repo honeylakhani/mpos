@@ -31,6 +31,8 @@
 		61E30A661DEA756E007F035B /* MPOSRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A651DEA756E007F035B /* MPOSRequestParams.m */; };
 		61E30A6B1DEA8390007F035B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E30A6A1DEA8390007F035B /* libz.tbd */; };
 		61E30A711DEA8E14007F035B /* MPOSWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A701DEA8E14007F035B /* MPOSWebVC.m */; };
+		61E30A741DEAACB8007F035B /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A731DEAACB8007F035B /* SuccessViewController.m */; };
+		61E30A771DEAACCB007F035B /* FailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A761DEAACCB007F035B /* FailureViewController.m */; };
 		A1285A3BB30BAD1A4120E9FC /* Pods_MPOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC8D097A62D317D36296BD6 /* Pods_MPOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,10 @@
 		61E30A6A1DEA8390007F035B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		61E30A6F1DEA8E14007F035B /* MPOSWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSWebVC.h; path = controllers/MPOSWebVC.h; sourceTree = "<group>"; };
 		61E30A701DEA8E14007F035B /* MPOSWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSWebVC.m; path = controllers/MPOSWebVC.m; sourceTree = "<group>"; };
+		61E30A721DEAACB8007F035B /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessViewController.h; path = controllers/SuccessViewController.h; sourceTree = "<group>"; };
+		61E30A731DEAACB8007F035B /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessViewController.m; path = controllers/SuccessViewController.m; sourceTree = "<group>"; };
+		61E30A751DEAACCB007F035B /* FailureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FailureViewController.h; path = controllers/FailureViewController.h; sourceTree = "<group>"; };
+		61E30A761DEAACCB007F035B /* FailureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FailureViewController.m; path = controllers/FailureViewController.m; sourceTree = "<group>"; };
 		A064974F270C774001517816 /* Pods-MPOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MPOS/Pods-MPOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +190,10 @@
 				61E30A5C1DEA07B4007F035B /* ProductTableViewCell.xib */,
 				61E30A5F1DEA3F2A007F035B /* FinalPaymentViewController.h */,
 				61E30A601DEA3F2A007F035B /* FinalPaymentViewController.m */,
+				61E30A721DEAACB8007F035B /* SuccessViewController.h */,
+				61E30A731DEAACB8007F035B /* SuccessViewController.m */,
+				61E30A751DEAACCB007F035B /* FailureViewController.h */,
+				61E30A761DEAACCB007F035B /* FailureViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +431,7 @@
 				61E30A501DE9FF12007F035B /* MPOSDashboardVC.m in Sources */,
 				61E30A321DE9CA19007F035B /* MPOSRequestManager.m in Sources */,
 				61E30A2B1DE9C9A0007F035B /* MPOSAppDelegate.m in Sources */,
+				61E30A741DEAACB8007F035B /* SuccessViewController.m in Sources */,
 				61E30A451DE9CBEC007F035B /* MPOSSSKeychain.m in Sources */,
 				61E30A661DEA756E007F035B /* MPOSRequestParams.m in Sources */,
 				61E30A411DE9CBE1007F035B /* MPOSReachability.m in Sources */,
@@ -428,6 +439,7 @@
 				61E30A381DE9CA34007F035B /* MPOSAlertController.m in Sources */,
 				61E30A4F1DE9FF12007F035B /* MPOSCreateOrderVC.m in Sources */,
 				61E30A3C1DE9CA4D007F035B /* MPOSBaseVC.m in Sources */,
+				61E30A771DEAACCB007F035B /* FailureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

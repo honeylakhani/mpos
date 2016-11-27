@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MPOSBaseVC.h"
 @interface FinalPaymentViewController : UIViewController
-
+@property NSString *custPhone;
 @end

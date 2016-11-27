@@ -100,7 +100,7 @@
         <!--Final Payment View Controller-->
         <scene sceneID="Mb6-sw-oK4">
             <objects>
-                <viewController storyboardIdentifier="FinalPayment" id="5cP-gC-vuk" customClass="FinalPaymentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinalPaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5cP-gC-vuk" customClass="FinalPaymentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5iG-hV-cHp"/>
                         <viewControllerLayoutGuide type="bottom" id="tPW-vM-mi5"/>

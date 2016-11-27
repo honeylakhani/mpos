@@ -107,7 +107,6 @@
   [btnSendBill setBackgroundColor:[self colorWithHexString:@"01BED0"]];
   btnSendBill.titleLabel.font = FONT_NORMAL(14.0);
   [btnSendBill setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-  btnSendBill.layer.cornerRadius = 20.0;
   btnSendBill.clipsToBounds = YES;
   [vwFooterForVat addSubview:btnSendBill];
   

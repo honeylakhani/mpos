@@ -78,11 +78,11 @@
                 <constraint firstItem="Gl2-Dr-E1L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GTZ-BN-eq6"/>
                 <constraint firstItem="vni-Sw-8kd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ONs-tl-lik"/>
                 <constraint firstItem="H3k-Kw-KJQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OTV-A8-4Mr"/>
-                <constraint firstItem="zRv-fH-91D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="S2g-6Q-Jr4"/>
+                <constraint firstItem="zRv-fH-91D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="S2g-6Q-Jr4"/>
                 <constraint firstItem="cyD-KZ-RjZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fBo-Qr-1ru"/>
                 <constraint firstItem="zRv-fH-91D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g0L-NA-0Bb"/>
                 <constraint firstItem="cyD-KZ-RjZ" firstAttribute="height" secondItem="vni-Sw-8kd" secondAttribute="height" id="hqn-kc-WFO"/>
-                <constraint firstItem="D4S-au-MJh" firstAttribute="top" secondItem="cyD-KZ-RjZ" secondAttribute="bottom" constant="30" id="l8a-eG-n66"/>
+                <constraint firstItem="D4S-au-MJh" firstAttribute="top" secondItem="cyD-KZ-RjZ" secondAttribute="bottom" constant="90" id="l8a-eG-n66"/>
                 <constraint firstItem="D4S-au-MJh" firstAttribute="width" secondItem="cyD-KZ-RjZ" secondAttribute="width" id="lzJ-sY-s37"/>
                 <constraint firstAttribute="bottom" secondItem="H3k-Kw-KJQ" secondAttribute="bottom" constant="80" id="qT6-hh-exE"/>
                 <constraint firstItem="vni-Sw-8kd" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="3/4" id="qfJ-Z9-B9Z"/>

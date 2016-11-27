@@ -14,7 +14,7 @@
 }
 
 @property CGFloat deviceHeight,deviceWidth;
-
+@property NSString *phone;
 - (void)setUpLoginButton;
 - (void)setUpImageBackButton;
 -(UIColor*)colorWithHexString:(NSString*)hex;
