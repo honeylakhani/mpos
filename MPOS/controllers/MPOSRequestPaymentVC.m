@@ -18,6 +18,23 @@
     [super viewDidLoad];
    
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+  return tableView.frame.size.height - (120+3*75);
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.frame.size.height-(120+3*75))];
+  UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+  [btn setTitle:@"Send Request" forState:UIControlStateNormal];
+  [btn setFrame:CGRectMake(view.frame.size.width/2-100, view.frame.size.height/2-20, 200, 40)];
+  [btn addTarget:self action:@selector(btnSendPaymentClicked) forControlEvents:UIControlEventTouchUpInside];
+  [btn setBackgroundColor:[self colorWithHexString:@"01BED0"]];
+  [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+  [view addSubview:btn];
+  return view;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   return 4;
@@ -74,6 +91,10 @@
   
   
   return cell;
+}
+-(void)btnSendPaymentClicked
+{
+  
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

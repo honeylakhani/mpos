@@ -15,6 +15,7 @@
   UILabel *lblRightVw = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 25, 40)];
   lblRightVw.font = FONT_NORMAL(10.0);
   lblRightVw.text = @"/Unit";
+  lblRightVw.textColor = [UIColor colorWithRed:176.0/255.0 green:195.0/255.0 blue:137.0/255.0 alpha:1.0];
   self.txtFldAmt.rightView = lblRightVw;
   self.txtFldAmt.rightViewMode = UITextFieldViewModeAlways;
   self.txtFldProductName.inputAccessoryView = [self designKeyboardToolbar];

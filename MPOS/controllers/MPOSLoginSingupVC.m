@@ -7,7 +7,11 @@
 //
 
 #import "MPOSLoginSingupVC.h"
+
 #import "MPOSCreateOrderVC.h"
+
+#import "MPOSDashboardVC.h"
+
 @interface MPOSLoginSingupVC ()
 @property (weak, nonatomic) IBOutlet UITextField *txtFldUserName;
 
@@ -27,7 +31,7 @@
 }
 
 -(void)setUpViews{
-    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBar.hidden = NO;
     
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
     self.txtFldPassword.leftView = paddingView;
@@ -57,8 +61,12 @@
 
 
 - (IBAction)bnClickedLogin:(id)sender {
-  MPOSCreateOrderVC *vc = [[MPOSCreateOrderVC alloc]init];
-  [self.navigationController pushViewController:vc animated:YES];
+
+    UIStoryboard *storybrd = [UIStoryboard storyboardWithName:@"MPOSMain" bundle:nil];
+    MPOSDashboardVC * dashBrdVC = [storybrd instantiateInitialViewController];
+    [self.navigationController pushViewController:dashBrdVC animated:YES];
+    
+
 }
 - (IBAction)btnClickedForgotPassword:(id)sender {
 }

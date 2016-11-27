@@ -30,6 +30,7 @@
     [super viewDidLoad];
   [self designTableView];
   noOfRows = 1;
+  self.title = @"ADD ORDER";
   
   
 }
@@ -119,7 +120,7 @@
   MPOSRequestPaymentVC *vc = [sb instantiateViewControllerWithIdentifier:@"requestPayment"];
   vc.totalQty =[NSString stringWithFormat:@"%d",totalQty];
   vc.totalAmt = [NSString stringWithFormat:@"%0.2lf",totalAmt];
-  [self presentViewController:vc animated:YES completion:nil];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 -(void)updateTotalAmountValue
 {
@@ -165,15 +166,7 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-  NSUInteger row  = textField.tag%kgentag;
-  if(row == noOfRows-1)
-  {
-    [_tblVw beginUpdates];
-    noOfRows++;
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:noOfRows-1 inSection:0];
-    [_tblVw insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationTop];
-    [_tblVw endUpdates];
-  }
+  
   
  
 }
@@ -191,6 +184,20 @@
   {
     totalQty+=[textField.text intValue];
     
+  }
+  if (txtfldNo == 2) {
+    if([textField hasText])
+    {
+    NSUInteger row  = textField.tag%kgentag;
+    if(row == noOfRows-1)
+    {
+      [_tblVw beginUpdates];
+      noOfRows++;
+      NSIndexPath *indexPath = [NSIndexPath indexPathForRow:noOfRows-1 inSection:0];
+      [_tblVw insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationTop];
+      [_tblVw endUpdates];
+    }
+  }
   }
   [self.view endEditing:YES];
   return;

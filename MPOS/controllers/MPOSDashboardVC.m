@@ -7,6 +7,7 @@
 //
 
 #import "MPOSDashboardVC.h"
+#import "MPOSCreateOrderVC.h"
 
 @interface MPOSDashboardVC ()
 
@@ -16,7 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)setupVies{
+    self.navigationController.title = @"HOME";
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +40,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)btnClickedRequestPayment:(id)sender {
+    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MPOSCreateOrderVC class])] animated:nil];
+    
+}
 
 @end

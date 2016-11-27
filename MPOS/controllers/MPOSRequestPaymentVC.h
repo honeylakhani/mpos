@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MPOSRequestPaymentVC : UIViewController
+#import "MPOSBaseVC.h"
+@interface MPOSRequestPaymentVC : MPOSBaseVC
 @property (weak, nonatomic) IBOutlet UITableView *tblVw;
 @property(strong,nonatomic) NSString *totalQty,*totalAmt;
 @end
