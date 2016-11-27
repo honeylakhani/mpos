@@ -27,6 +27,10 @@
 		61E30A5D1DEA07B4007F035B /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A5B1DEA07B4007F035B /* ProductTableViewCell.m */; };
 		61E30A5E1DEA07B4007F035B /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E30A5C1DEA07B4007F035B /* ProductTableViewCell.xib */; };
 		61E30A611DEA3F2A007F035B /* FinalPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A601DEA3F2A007F035B /* FinalPaymentViewController.m */; };
+		61E30A631DEA7422007F035B /* ChirpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E30A621DEA7422007F035B /* ChirpSDK.framework */; };
+		61E30A661DEA756E007F035B /* MPOSRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A651DEA756E007F035B /* MPOSRequestParams.m */; };
+		61E30A6B1DEA8390007F035B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E30A6A1DEA8390007F035B /* libz.tbd */; };
+		61E30A711DEA8E14007F035B /* MPOSWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E30A701DEA8E14007F035B /* MPOSWebVC.m */; };
 		A1285A3BB30BAD1A4120E9FC /* Pods_MPOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC8D097A62D317D36296BD6 /* Pods_MPOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,12 @@
 		61E30A5C1DEA07B4007F035B /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductTableViewCell.xib; path = controllers/ProductTableViewCell.xib; sourceTree = "<group>"; };
 		61E30A5F1DEA3F2A007F035B /* FinalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalPaymentViewController.h; sourceTree = "<group>"; };
 		61E30A601DEA3F2A007F035B /* FinalPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalPaymentViewController.m; sourceTree = "<group>"; };
+		61E30A621DEA7422007F035B /* ChirpSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChirpSDK.framework; path = MPOS/ChirpSDK.framework; sourceTree = "<group>"; };
+		61E30A641DEA756E007F035B /* MPOSRequestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSRequestParams.h; path = WebService/MPOSRequestParams.h; sourceTree = "<group>"; };
+		61E30A651DEA756E007F035B /* MPOSRequestParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSRequestParams.m; path = WebService/MPOSRequestParams.m; sourceTree = "<group>"; };
+		61E30A6A1DEA8390007F035B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		61E30A6F1DEA8E14007F035B /* MPOSWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPOSWebVC.h; path = controllers/MPOSWebVC.h; sourceTree = "<group>"; };
+		61E30A701DEA8E14007F035B /* MPOSWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPOSWebVC.m; path = controllers/MPOSWebVC.m; sourceTree = "<group>"; };
 		A064974F270C774001517816 /* Pods-MPOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MPOS/Pods-MPOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E30A6B1DEA8390007F035B /* libz.tbd in Frameworks */,
+				61E30A631DEA7422007F035B /* ChirpSDK.framework in Frameworks */,
 				A1285A3BB30BAD1A4120E9FC /* Pods_MPOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +109,8 @@
 		18F8CB3400A7217F22185FE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61E30A6A1DEA8390007F035B /* libz.tbd */,
+				61E30A621DEA7422007F035B /* ChirpSDK.framework */,
 				3CC8D097A62D317D36296BD6 /* Pods_MPOS.framework */,
 			);
 			name = Frameworks;
@@ -151,6 +165,8 @@
 		61E30A2D1DE9C9DA007F035B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				61E30A6F1DEA8E14007F035B /* MPOSWebVC.h */,
+				61E30A701DEA8E14007F035B /* MPOSWebVC.m */,
 				61E30A461DE9FF12007F035B /* MPOSCreateOrderVC.h */,
 				61E30A471DE9FF12007F035B /* MPOSCreateOrderVC.m */,
 				61E30A481DE9FF12007F035B /* MPOSDashboardVC.h */,
@@ -185,6 +201,8 @@
 		61E30A2F1DE9C9F5007F035B /* Web Service */ = {
 			isa = PBXGroup;
 			children = (
+				61E30A641DEA756E007F035B /* MPOSRequestParams.h */,
+				61E30A651DEA756E007F035B /* MPOSRequestParams.m */,
 				61E30A301DE9CA19007F035B /* MPOSRequestManager.h */,
 				61E30A311DE9CA19007F035B /* MPOSRequestManager.m */,
 			);
@@ -396,6 +414,7 @@
 				61E30A351DE9CA24007F035B /* MPOSActivityView.m in Sources */,
 				61E30A511DE9FF12007F035B /* MPOSLoginSingupVC.m in Sources */,
 				61E30A531DE9FF12007F035B /* MPOSRequestPaymentVC.m in Sources */,
+				61E30A711DEA8E14007F035B /* MPOSWebVC.m in Sources */,
 				61E30A121DE9A2B3007F035B /* main.m in Sources */,
 				61E30A2C1DE9C9A0007F035B /* MPOSViewController.m in Sources */,
 				61E30A5D1DEA07B4007F035B /* ProductTableViewCell.m in Sources */,
@@ -403,6 +422,7 @@
 				61E30A321DE9CA19007F035B /* MPOSRequestManager.m in Sources */,
 				61E30A2B1DE9C9A0007F035B /* MPOSAppDelegate.m in Sources */,
 				61E30A451DE9CBEC007F035B /* MPOSSSKeychain.m in Sources */,
+				61E30A661DEA756E007F035B /* MPOSRequestParams.m in Sources */,
 				61E30A411DE9CBE1007F035B /* MPOSReachability.m in Sources */,
 				61E30A611DEA3F2A007F035B /* FinalPaymentViewController.m in Sources */,
 				61E30A381DE9CA34007F035B /* MPOSAlertController.m in Sources */,
@@ -527,6 +547,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3T2M5UN5C5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MPOS",
+				);
 				INFOPLIST_FILE = MPOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -541,6 +565,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3T2M5UN5C5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MPOS",
+				);
 				INFOPLIST_FILE = MPOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

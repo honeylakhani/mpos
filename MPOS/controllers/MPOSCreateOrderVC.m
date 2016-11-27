@@ -49,7 +49,7 @@
   frameOfFooter.origin.y = _tblVw.frame.origin.y + _tblVw.frame.size.height;
   vwFooter.frame = frameOfFooter;
   [self.view addSubview:vwFooter];
-  _tblVw.separatorColor = [UIColor whiteColor];
+//  _tblVw.separatorColor = [UIColor whiteColor];
 }
 -(UIView*)designNewFooterView
 

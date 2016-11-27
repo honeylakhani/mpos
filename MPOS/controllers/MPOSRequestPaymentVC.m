@@ -7,9 +7,13 @@
 //
 
 #import "MPOSRequestPaymentVC.h"
-
+#import "MPOSRequestParams.h"
+#import <ChirpSDK/ChirpSDK.h>
+#import "MPOSSSKeychain.h"
 @interface MPOSRequestPaymentVC ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
-
+{
+  UITextField *txtFldName,*txtFldPhone;
+}
 @end
 
 @implementation MPOSRequestPaymentVC
@@ -17,14 +21,84 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+  [[ChirpSDK sdk] setAppKey:CHIRP_APP_KEY andSecret:CHIRP_APP_SECRET withCompletion:nil];
+  
+  
+  [[ChirpSDK sdk] setChirpHeardBlock:^(Chirp *chirp, NSError *error)
+   {
+     if (!error && chirp)
+     {
+       [chirp fetchAssociatedDataWithCompletion:^(Chirp *chirp, NSError *error) {
+         NSDictionary *data = [chirp data];
+         NSString *body = data[@"text"];
+//         self.textViewReceiver.text = body;
+       }];
+       
+     }
+     else
+     {
+       NSLog(@"Error: %@", error);
+     }
+   }];
 }
+
+- (IBAction)sendMessage
+{
+  NSString *strBody;
+  NSError *err;
+  MPOSRequestParams *params = [MPOSRequestParams sharedParams];
+  NSDictionary *jsonDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:params.surl,params.furl,params.email,params.phone, nil] forKeys:[NSArray arrayWithObjects:@"surl",@"furl",@"email",@"phone", nil]];
+  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:NSJSONWritingPrettyPrinted
+                                                       error:&err];
+  NSString *stt = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+  //NSLog(@"url json ==== %@     %@",[jsonData description],stt);
+  
+ 
+  
+  NSString *guestCheckout=@"false";
+
+  strBody = [NSString stringWithFormat:@"key=%@&amount=%@&txnid=%@&email=%@&firstname=%@&udf1=%@&udf2=%@&udf3=%@&udf4=%@&udf5=%@&hash=%@&deviceId=%@&paymentParts=%@&paymentIdentifiers=%@&purchaseFrom=%@&txnDetails=%@&productinfo=%@&guestCheckout=%@",params.key,params.amount,params.txnid,params.email,params.firstname,params.udf1,params.udf2,params.udf3,params.udf4,params.udf5,params.hashValue,[self appUniqueID],@"[]",@"[]",@"merchant-app",stt,params.productinfo,guestCheckout];
+  
+  NSLog(@"prepareBodyForCreatePayment strBody :: %@",strBody);
+  NSDictionary *data  = [[NSDictionary alloc]initWithObjects:[NSArray arrayWithObjects:strBody,txtFldPhone.text, nil] forKeys:[NSArray arrayWithObjects:@"Post Data",@"Phone", nil]];
+  
+  [Chirp createChirpWithAssociatedData:data andCompletion:^(Chirp *chirp, NSError *error) {
+    [chirp chirp];
+  }];
+  
+}
+-(NSString*) appUniqueID{
+  // getting the unique key (if present ) from keychain , assuming "your app identifier" as a key
+  NSString *retrieveuuid = [MPOSSSKeychain passwordForService:SDK_BUNDLE_IDENTIFIER account:SDK_KEYCHAIN_ACCOUNT_KEY];
+  if (retrieveuuid == nil) { // if this is the first time app lunching , create key for device
+    NSString *strudid  = [self stringUniqueID];
+    // save newly created key to Keychain
+    [MPOSSSKeychain setPassword:strudid forService:SDK_BUNDLE_IDENTIFIER account:SDK_KEYCHAIN_ACCOUNT_KEY];
+    // this is the one time process
+  }
+  
+  NSString  *uniqueID = [MPOSSSKeychain passwordForService:SDK_BUNDLE_IDENTIFIER account:SDK_KEYCHAIN_ACCOUNT_KEY];
+  
+  //NSLog(@"PayuMoneyUniqueID = %@",uniqueID);
+  
+  return uniqueID;
+}
+
+- (NSString *)stringUniqueID {
+  
+  CFUUIDRef theUUID = CFUUIDCreate(NULL);
+  CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+  CFRelease(theUUID);
+  return (__bridge NSString *)string ;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-  return tableView.frame.size.height - (120+3*75);
+  return 100;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.frame.size.height-(120+3*75))];
+  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 100)];
   UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
   [btn setTitle:@"Send Request" forState:UIControlStateNormal];
   [btn setFrame:CGRectMake(view.frame.size.width/2-100, view.frame.size.height/2-20, 200, 40)];
@@ -32,6 +106,7 @@
   [btn setBackgroundColor:[self colorWithHexString:@"01BED0"]];
   [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   [view addSubview:btn];
+  [view setBackgroundColor:[UIColor whiteColor]];
   return view;
 }
 
@@ -76,26 +151,28 @@
   
   if(indexPath.row == 1)
   {
-       UITextField *txtfld = [[UITextField alloc]initWithFrame:CGRectMake(20, 10, tableView.frame.size.width-40, cell.frame.size.height-20)];
-      txtfld.placeholder = @"Name";
-    txtfld.delegate = self;
-      [cell.contentView addSubview:txtfld];
+      txtFldName = [[UITextField alloc]initWithFrame:CGRectMake(20, 10, tableView.frame.size.width-40, cell.frame.size.height-20)];
+      txtFldName.placeholder = @"Name";
+    txtFldName.delegate = self;
+      [cell.contentView addSubview:txtFldName];
   }
   if(indexPath.row == 2)
   {
-    UITextField *txtfld = [[UITextField alloc]initWithFrame:CGRectMake(20, 20, tableView.frame.size.width-40, cell.frame.size.height-40)];
-    txtfld.placeholder = @"Phone No";
-    txtfld.delegate = self;
-    [cell.contentView addSubview:txtfld];
+    txtFldPhone = [[UITextField alloc]initWithFrame:CGRectMake(20, 10, tableView.frame.size.width-40, cell.frame.size.height-20)];
+    txtFldPhone.placeholder = @"Phone No";
+    txtFldPhone.delegate = self;
+    [cell.contentView addSubview:txtFldPhone];
   }
-  
+  cell.selectionStyle = UITableViewCellSelectionStyleNone;
   
   return cell;
 }
 -(void)btnSendPaymentClicked
 {
-  
+  [self sendMessage];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
   

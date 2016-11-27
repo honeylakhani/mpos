@@ -7,14 +7,14 @@
 //
 
 #import "MPOSRequestManager.h"
-//#import "PUMAppConstant.h"
+#import "MPOSConstants.h"
 //#import "PUMRequestParams.h"
 #import "MPOSReachability.h"
 //#import "PUMInternalConstants.h"
 //#import "PUMUtils.h"
 
 #define REQUEST_TIMEOUT 60.0
-#define baseURL @""
+
 @implementation MPOSRequestManager
     
 -(void)hitWebServiceForURLWithPostBlock:(BOOL)isPost isAccessTokenRequired:(BOOL)tokenRequired webServiceURL:(NSString *)apiURL withBody:(NSString *)requestBody andTag:(SDK_REQUEST_TYPE)tag completionHandler:(void (^)(id, SDK_REQUEST_TYPE, NSError *,NSHTTPURLResponse *))callback

@@ -42,6 +42,7 @@
     [self setUpImageBackButton];
 
     [self setNavBarTitleAsImage];
+  
 }
 
 - (void)setupMenuBarButtonItems {
@@ -135,7 +136,12 @@
         [requestManager hitWebServiceForURLWithPostBlock:type isAccessTokenRequired:tokenRequired webServiceURL:strURL withBody:strBody andTag:tag completionHandler:^(id object, SDK_REQUEST_TYPE tag, NSError *error,NSHTTPURLResponse *httpResponse) {
          
             if(error == nil){
-              [self parseResponse:object tag:tag];
+              if([object isKindOfClass:[NSDictionary class]])
+              {
+                NSDictionary *responseObj = (NSDictionary *)object;
+              [self parseResponse:responseObj tag:tag];
+              }
+             
             }
           
                 else {
@@ -156,12 +162,25 @@
   
 }
 
--(void)parseResponse:(id)object tag:(SDK_REQUEST_TYPE)tag
+-(void)parseResponse:(NSDictionary *)object tag:(SDK_REQUEST_TYPE)tag
 {
-    
+   
 }
 
+#pragma Dismiss Keyboard On Tap Outside TextField
 
+-(void)dismissKeyboardOnTapOutsideTextField{
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                 initWithTarget:self
+                                 action:@selector(dismissKeyboard)];
+  
+  [self.view addGestureRecognizer:tap];
+}
+
+-(void)dismissKeyboard {
+  [self.view endEditing:NO];
+  //    [self.txtFieldActive resignFirstResponder];
+}
 
 
 @end

@@ -25,6 +25,6 @@
 
 
 - (void)fetchResponsefrom : (NSString *)strURL isPost : (BOOL)type body : (NSString *)strBody  tag : (SDK_REQUEST_TYPE)tag isAccessTokenRequired : (BOOL)tokenRequired;
-
+-(void)dismissKeyboardOnTapOutsideTextField;
 
 @end

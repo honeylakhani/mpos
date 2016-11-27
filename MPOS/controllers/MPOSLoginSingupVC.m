@@ -11,7 +11,7 @@
 #import "MPOSCreateOrderVC.h"
 
 #import "MPOSDashboardVC.h"
-
+#import "MPOSAlertController.h"
 @interface MPOSLoginSingupVC ()
 @property (weak, nonatomic) IBOutlet UITextField *txtFldUserName;
 
@@ -28,6 +28,7 @@
     [self setUpViews];
 //    [atextView  setTextContainerInset:UIEdgeInsetsMake(7, 7, 0, 0)];
     // Do any additional setup after loading the view from its nib.
+  [self dismissKeyboardOnTapOutsideTextField];
 }
 
 -(void)setUpViews{
@@ -62,11 +63,36 @@
 
 - (IBAction)bnClickedLogin:(id)sender {
 
-    UIStoryboard *storybrd = [UIStoryboard storyboardWithName:@"MPOSMain" bundle:nil];
-    MPOSDashboardVC * dashBrdVC = [storybrd instantiateInitialViewController];
-    [self.navigationController pushViewController:dashBrdVC animated:YES];
+  if(![self.txtFldUserName hasText] || ![self.txtFldPassword hasText])
+    
+  {
+    
+  }
+  else
+  {
+    [self fetchResponsefrom:@"/v1/user/login" isPost:YES body:[NSString stringWithFormat:@"user_name=%@&passwd=%@",self.txtFldUserName.text,self.txtFldPassword.text] tag:LOGIN isAccessTokenRequired:NO];
+  }
+  
     
 
+}
+-(void)parseResponse:(NSDictionary *)object tag: (SDK_REQUEST_TYPE)tag
+{
+  if(tag == LOGIN)
+  {
+    
+    if([[object valueForKey:@"login_message"] isEqualToString:@"Success"])
+    {
+      UIStoryboard *storybrd = [UIStoryboard storyboardWithName:@"MPOSMain" bundle:nil];
+      MPOSDashboardVC * dashBrdVC = [storybrd instantiateInitialViewController];
+      [self.navigationController pushViewController:dashBrdVC animated:YES];
+    }
+    else
+    {
+      [MPOSAlertController presentOkayAlertWithTitle:@"PayX" message:@"Invalid Credentials"];
+    }
+   
+  }
 }
 - (IBAction)btnClickedForgotPassword:(id)sender {
 }
